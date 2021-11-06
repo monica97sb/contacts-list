@@ -1,5 +1,14 @@
 <%= form_with(model: contact) do |form| %>
-    <% if contact.errors.any? %>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+      <%= link_to contacts_path do %>
+        <i class="fas fa-arrow-circle-left fa-2x text-dark mr-3"></i>
+      <% end %>
+      <%= button_tag(type: 'submit', class: "btn bg-transparent") do %>
+        <i class="fas fa-save fa-2x text-dark"></i>
+      <% end %>
+  </div>
+
+  <% if contact.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
@@ -12,26 +21,19 @@
     <% end %>
 
     <div class="field">
-      <%= form.label :first_name %>
-      <%= form.text_field :first_name %>
+      <%= form.text_field :first_name, { class: "form-control mb-3", placeholder: "First Name*" }%>
     </div>
 
     <div class="field">
-      <%= form.label :last_name %>
-      <%= form.text_field :last_name %>
+      <%= form.text_field :last_name, { class: "form-control mb-3", placeholder: "Last Name*" }%>
     </div>
 
     <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
+      <%= form.text_field :email, { class: "form-control mb-3", placeholder: "Email*" } %>
     </div>
 
     <div class="field">
-      <%= form.label :phone %>
-      <%= form.text_field :phone %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
+      <%= form.text_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
     </div>
 <% end %>
+
