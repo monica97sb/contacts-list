@@ -1,5 +1,9 @@
 <div class="container" style="width:50%">
-  <p id="notice"><%= notice %></p>
+  <% if notice.present? %>
+    <div class="alert alert-success" role="alert" id="notice">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <div class="d-flex align-items-center justify-content-between mb-3">
     <%= link_to contacts_path do %>

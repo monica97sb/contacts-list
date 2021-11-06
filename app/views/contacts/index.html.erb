@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <div class="alert alert-success" role="alert" id="notice">
+    <%= notice %>
+  </div>
+<% end %>
 
 <div class="d-flex align-items-center justify-content-between">
   <h2 class="mb-3">My Contacts</h2>

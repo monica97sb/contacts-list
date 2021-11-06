@@ -9,31 +9,30 @@
   </div>
 
   <% if contact.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-        <ul>
-          <% contact.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= form.text_field :first_name, { class: "form-control mb-3", placeholder: "First Name*" }%>
+    <div id="error_explanation" class="alert alert-warning" role="alert" id="notice">
+      <h4>The contact could not be saved:</h4>
+      <ul>
+        <% contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
     </div>
+  <% end %>
 
-    <div class="field">
-      <%= form.text_field :last_name, { class: "form-control mb-3", placeholder: "Last Name*" }%>
-    </div>
+  <div class="field">
+    <%= form.text_field :first_name, { class: "form-control mb-3", placeholder: "First Name*" }%>
+  </div>
 
-    <div class="field">
-      <%= form.text_field :email, { class: "form-control mb-3", placeholder: "Email*" } %>
-    </div>
+  <div class="field">
+    <%= form.text_field :last_name, { class: "form-control mb-3", placeholder: "Last Name*" }%>
+  </div>
 
-    <div class="field">
-      <%= form.text_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
-    </div>
+  <div class="field">
+    <%= form.text_field :email, { class: "form-control mb-3", placeholder: "Email*" } %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
+  </div>
 <% end %>
 
