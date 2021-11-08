@@ -3,45 +3,46 @@ require "application_system_test_case"
 class ContactsTest < ApplicationSystemTestCase
   setup do
     @contact = contacts(:one)
+    NEW_EMAIL = "new_email@new_email.com"
   end
 
   test "visiting the index" do
     visit contacts_url
-    assert_selector "h1", text: "Contacts"
+    assert_selector "h2", text: "My Contacts"
   end
 
-  test "creating a Contact" do
+  test "creating a contact" do
     visit contacts_url
-    click_on "New Contact"
+    first(:css, ".fa-user-plus").click
 
-    fill_in "Email", with: @contact.email
-    fill_in "First name", with: @contact.first_name
-    fill_in "Last name", with: @contact.last_name
-    fill_in "Phone", with: @contact.phone
-    click_on "Create Contact"
+    fill_in "Email*", with: NEW_EMAIL
+    fill_in "First Name*", with: @contact.first_name
+    fill_in "Last Name*", with: @contact.last_name
+    fill_in "Phone Number*", with: @contact.phone
+    first(:css, ".fa-save").click
 
     assert_text "Contact was successfully created"
-    click_on "Back"
+    first(:css, ".fa-arrow-circle-left").click
   end
 
-  test "updating a Contact" do
+  test "updating a contact" do
     visit contacts_url
-    click_on "Edit", match: :first
+    first(:css, ".fa-edit").click
 
-    fill_in "Email", with: @contact.email
-    fill_in "First name", with: @contact.first_name
-    fill_in "Last name", with: @contact.last_name
-    fill_in "Phone", with: @contact.phone
-    click_on "Update Contact"
+    fill_in "Email*", with: NEW_EMAIL
+    fill_in "First Name*", with: @contact.first_name
+    fill_in "Last Name*", with: @contact.last_name
+    fill_in "Phone Number*", with: @contact.phone
+    first(:css, ".fa-save").click
 
     assert_text "Contact was successfully updated"
-    click_on "Back"
+    first(:css, ".fa-arrow-circle-left").click
   end
 
-  test "destroying a Contact" do
+  test "destroying a contact" do
     visit contacts_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      first(:css, ".fa-trash").click
     end
 
     assert_text "Contact was successfully destroyed"

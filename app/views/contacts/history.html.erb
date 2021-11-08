@@ -1,0 +1,34 @@
+<div class="d-flex align-items-center justify-content-between">
+    <h2 class="mb-3">My History</h2>
+    <div>
+        <%= link_to contacts_path do %>
+            <i class="fas fa-arrow-circle-left fa-2x text-dark"></i>
+        <% end %>
+    </div>
+</div>
+
+<table class="table">
+    <thead style="background-color: #e3f2fd;">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Action performed</th>
+            <th>Modification date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @registrations.each do |history| %>
+        <tr>
+            <td><%= history.first_name %></td>
+            <td><%= history.last_name %></td>
+            <td><%= history.email %></td>
+            <td><%= history.phone %></td>
+            <td><%= history.action %></td>
+            <td><%= history.created_at.strftime('%F') %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

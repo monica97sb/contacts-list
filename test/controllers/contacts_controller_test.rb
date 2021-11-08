@@ -37,7 +37,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update contact" do
     patch contact_url(@contact), params: { contact: { email: @contact.email, first_name: @contact.first_name, last_name: @contact.last_name, phone: @contact.phone } }
-    assert_redirected_to contact_url(@contact)
+    assert_redirected_to contact_url(Contact.last)
   end
 
   test "should destroy contact" do
@@ -54,7 +54,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "should not create contact if any empty field" do
+  test "should not create contact if any empty required field" do
     delete contact_url(@contact)
 
     assert_no_difference('Contact.count') do
