@@ -24,22 +24,40 @@ class ContactTest < ActiveSupport::TestCase
     assert_equal(Contact.find_by(id: @contact.id), nil)
   end
 
-  test "can not save contact if any empty required field" do
-    assert_equal(Contact.new(first_name: "", last_name: LAST_NAME, email: EMAIL, phone: PHONE).valid?, false)
-    assert_equal(Contact.new(first_name: FIRST_NAME, last_name: "", email: EMAIL, phone: PHONE).valid?, false)
-    assert_equal(Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: "", phone: PHONE).valid?, false)
-    assert_equal(Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: EMAIL, phone: "").valid?, false)
+  test "can not save contact if empty first name" do
+    @contact = Contact.new(first_name: "", last_name: LAST_NAME, email: EMAIL, phone: PHONE)
+    assert !@contact.valid? 
+    assert !@contact.save()
+  end
+
+  test "can not save contact if empty last name" do
+    @contact = Contact.new(first_name: FIRST_NAME, last_name: "", email: EMAIL, phone: PHONE)
+    assert !@contact.valid? 
+    assert !@contact.save()
+  end
+
+  test "can not save contact if empty email" do
+    @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: "", phone: PHONE)
+    assert !@contact.valid? 
+    assert !@contact.save()
+  end
+
+  test "can not save contact if empty phone number" do
+    @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: EMAIL, phone: "")
+    assert !@contact.valid? 
+    assert !@contact.save()
   end
 
   test "can not save contact if repeated email" do
-    @contact.save()
+    assert @contact.save()
     @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: EMAIL, phone: PHONE)
-    assert_equal(@contact.valid?, false)
+    assert !@contact.valid?
+    assert !@contact.save()
   end
 
   test "can update contact when keeping email" do
     @contact.save()
-    assert_equal(@contact.update(email: EMAIL), true)
+    assert @contact.update(email: EMAIL)
     assert_equal(Contact.find_by(id: @contact.id).email, EMAIL)
   end
 end
