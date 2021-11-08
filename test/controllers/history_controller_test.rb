@@ -4,7 +4,7 @@ class HistoryControllerTest < ActionDispatch::IntegrationTest
   setup do
     @history = histories(:one)
     @contact = contacts(:one)
-    NEW_EMAIL = "new_email@new_email.com"
+    NEW_EMAIL = "newemail@newemail.com"
   end
 
   test "should get history" do

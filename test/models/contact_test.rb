@@ -6,7 +6,7 @@ class ContactTest < ActiveSupport::TestCase
     LAST_NAME = "Last name"
     EMAIL = "Email"
     PHONE = "Phone"
-    NEW_EMAIL = "New email"
+    NEW_EMAIL = "newemail@newemail.com"
     @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: EMAIL, phone: PHONE)
     @previous = Contact.all.count
   end

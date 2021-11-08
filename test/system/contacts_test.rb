@@ -3,7 +3,7 @@ require "application_system_test_case"
 class ContactsTest < ApplicationSystemTestCase
   setup do
     @contact = contacts(:one)
-    NEW_EMAIL = "new_email@new_email.com"
+    NEW_EMAIL = "newemail@newemail.com"
   end
 
   test "visiting contact list" do

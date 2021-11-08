@@ -9462,3 +9462,179 @@ Processing by ContactsController#index as HTML
 Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 2.0ms | Allocations: 6065)
 
 
+Started GET "/contacts" for ::1 at 2021-11-08 19:41:04 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 5598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 10292)
+Completed 200 OK in 38ms (Views: 17.5ms | ActiveRecord: 13.1ms | Allocations: 11898)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-08 19:41:05 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 4.7ms | Allocations: 1486)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1792)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1857)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2355)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: contact) do |form| %>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+      <%= link_to contacts_path do %>
+        <i class="fas fa-arrow-circle-left fa-2x text-dark mr-3"></i>
+      <% end %>
+      <%= button_tag(type: 'submit', class: "btn bg-transparent") do %>
+        <i class="fas fa-save fa-2x text-dark"></i>
+      <% end %>
+  </div>
+
+  <% if contact.errors.any? %>
+    <div id="error_explanation" class="alert alert-warning" role="alert" id="notice">
+      <h4>The contact could not be saved:</h4>
+      <ul>
+        <% contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :first_name, { class: "form-control mb-3", placeholder: "First Name*" }%>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :last_name, { class: "form-control mb-3", placeholder: "Last Name*" }%>
+  </div>
+
+  <div class="field">
+    <%= form.text_field type="email" :email, { class: "form-control mb-3", placeholder: "Email*" } %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
+  </div>
+<% end %>
+
+
+):
+1:    <%= form_with(model: contact) do |form| %>
+2:      <div class="d-flex align-items-center justify-content-between mb-3">
+3:          <%= link_to contacts_path do %>
+4:            <i class="fas fa-arrow-circle-left fa-2x text-dark mr-3"></i>
+5:          <% end %>
+6:          <%= button_tag(type: 'submit', class: "btn bg-transparent") do %>
+7:            <i class="fas fa-save fa-2x text-dark"></i>
+8:          <% end %>
+9:      </div>
+10:    
+11:      <% if contact.errors.any? %>
+12:        <div id="error_explanation" class="alert alert-warning" role="alert" id="notice">
+13:          <h4>The contact could not be saved:</h4>
+14:          <ul>
+15:            <% contact.errors.each do |error| %>
+16:              <li><%= error.full_message %></li>
+17:            <% end %>
+18:          </ul>
+19:        </div>
+20:      <% end %>
+21:    
+22:      <div class="field">
+23:        <%= form.text_field :first_name, { class: "form-control mb-3", placeholder: "First Name*" }%>
+24:      </div>
+25:    
+26:      <div class="field">
+27:        <%= form.text_field :last_name, { class: "form-control mb-3", placeholder: "Last Name*" }%>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= form.text_field type="email" :email, { class: "form-control mb-3", placeholder: "Email*" } %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.text_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
+36:      </div>
+37:    <% end %>
+  
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/contacts/_form.html.erb:31: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/contacts/_form.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/contacts/_form.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/contacts/new.html.erb:2
+Started GET "/contacts/new" for ::1 at 2021-11-08 19:41:28 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 8.5ms | Allocations: 894)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.2ms | Allocations: 367)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 5911)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 7016)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-08 19:41:37 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 8.6ms | Allocations: 2578)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2883)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2947)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 4018)
+
+
+  
+ActionView::Template::Error (undefined method `tel_field' for #<ActionView::Helpers::FormBuilder:0x00007fb9c55ce848>
+Did you mean?  text_field
+               date_field
+               url_field):
+    32:   </div>
+    33: 
+    34:   <div class="field">
+    35:     <%= form.tel_field :phone, { class: "form-control", placeholder: "Phone Number*" } %>
+    36:   </div>
+    37: <% end %>
+  
+app/views/contacts/_form.html.erb:35
+app/views/contacts/_form.html.erb:1
+app/views/contacts/new.html.erb:2
+Started GET "/contacts/new" for ::1 at 2021-11-08 19:41:43 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 16.8ms | Allocations: 2933)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 3241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.0ms | Allocations: 367)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 7857)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 8962)
+
+

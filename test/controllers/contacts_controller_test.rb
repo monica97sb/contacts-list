@@ -3,7 +3,7 @@ require "test_helper"
 class ContactsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @contact = contacts(:one)
-    NEW_EMAIL = "new_email@new_email.com"
+    NEW_EMAIL = "newemail@newemail.com"
     EMPTY_STRING = ""
   end
 
