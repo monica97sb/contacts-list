@@ -4,7 +4,7 @@ class ContactTest < ActiveSupport::TestCase
   setup do
     FIRST_NAME = "First name"
     LAST_NAME = "Last name"
-    EMAIL = "Email"
+    EMAIL = "email@email.com"
     PHONE = "Phone"
     NEW_EMAIL = "newemail@newemail.com"
     @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: EMAIL, phone: PHONE)
@@ -59,5 +59,13 @@ class ContactTest < ActiveSupport::TestCase
     @contact.save()
     assert @contact.update(email: EMAIL)
     assert_equal(Contact.find_by(id: @contact.id).email, EMAIL)
+  end
+
+  test "can not update contact when email taken by another contact" do
+    @contact.save()
+
+    @contact = Contact.new(first_name: FIRST_NAME, last_name: LAST_NAME, email: NEW_EMAIL, phone: PHONE)
+    assert @contact.save
+    assert !@contact.update(email: EMAIL)
   end
 end

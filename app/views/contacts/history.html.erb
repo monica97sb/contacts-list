@@ -13,9 +13,9 @@
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
-            <th>Phone number</th>
-            <th>Action performed</th>
-            <th>Modification date</th>
+            <th class="text-center">Phone number</th>
+            <th class="text-center">Action performed</th>
+            <th class="text-center">Modification date</th>
         </tr>
     </thead>
 
@@ -25,9 +25,9 @@
             <td><%= history.first_name %></td>
             <td><%= history.last_name %></td>
             <td><%= history.email %></td>
-            <td><%= history.phone %></td>
-            <td><%= history.action %></td>
-            <td><%= history.created_at.strftime('%F') %></td>
+            <td class="text-center"><%= history.phone %></td>
+            <td class="text-center"><%= history.action %></td>
+            <td class="text-center"><%= history.created_at.strftime('%F') %></td>
         </tr>
         <% end %>
     </tbody>

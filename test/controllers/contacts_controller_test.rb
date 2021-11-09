@@ -54,20 +54,32 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "should not create contact if any empty required field" do
+  test "should not create contact if empty email" do
     delete contact_url(@contact)
 
     assert_no_difference('Contact.count') do
       post contacts_url, params: { contact: { email: EMPTY_STRING, first_name: @contact.first_name, last_name: @contact.last_name, phone: @contact.phone } }
     end
+  end
+
+  test "should not create contact if empty first name" do
+    delete contact_url(@contact)
 
     assert_no_difference('Contact.count') do
       post contacts_url, params: { contact: { email: @contact.email, first_name: EMPTY_STRING, last_name: @contact.last_name, phone: @contact.phone } }
     end
+  end
+
+  test "should not create contact if empty last email" do
+    delete contact_url(@contact)
 
     assert_no_difference('Contact.count') do
       post contacts_url, params: { contact: { email: @contact.email, first_name: @contact.first_name, last_name: EMPTY_STRING, phone: @contact.phone } }
     end
+  end
+
+  test "should not create contact if empty phone" do
+    delete contact_url(@contact)
 
     assert_no_difference('Contact.count') do
       post contacts_url, params: { contact: { email: @contact.email, first_name: @contact.first_name, last_name: @contact.last_name, phone: EMPTY_STRING } }

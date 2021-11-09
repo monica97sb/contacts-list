@@ -4,7 +4,7 @@ class HistoryTest < ActiveSupport::TestCase
   setup do
     FIRST_NAME = "First Name"
     LAST_NAME = "Last name"
-    EMAIL = "Email"
+    EMAIL = "email@email.com"
     PHONE = "Phone"
     CREATION = "Creation"
     UPDATE = "Update"

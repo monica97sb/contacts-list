@@ -22,8 +22,8 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
-      <th>Phone number</th>
-      <th>Actions</th>
+      <th class="text-center">Phone number</th>
+      <th class="text-center">Actions</th>
     </tr>
   </thead>
 
@@ -33,8 +33,8 @@
         <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td>
+        <td class="text-center"><%= contact.phone %></td>
+        <td class="text-center">
           <%= link_to contact do %>
             <i class="fas fa-eye mr-1 text-dark"></i>
           <% end %>
