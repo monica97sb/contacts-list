@@ -10931,3 +10931,775 @@ Processing by ContactsController#index as HTML
 Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 4.2ms | Allocations: 5938)
 
 
+Started GET "/" for ::1 at 2021-11-09 16:07:06 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 375)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 13106)
+Completed 200 OK in 43ms (Views: 25.3ms | ActiveRecord: 8.6ms | Allocations: 16149)
+
+
+Started GET "/" for ::1 at 2021-11-09 16:07:06 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6467)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.6ms | Allocations: 6870)
+
+
+Started GET "/contacts/7/edit" for ::1 at 2021-11-09 16:07:23 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mContact Load (1.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 7.0ms | Allocations: 1111)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5683)
+Completed 200 OK in 31ms (Views: 19.0ms | ActiveRecord: 3.5ms | Allocations: 7473)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:07:25 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 5556)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 2.1ms | Allocations: 5962)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:07:29 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.7ms | Allocations: 422)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 600)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.7ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 4866)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 5408)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:07:30 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5546)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 2.0ms | Allocations: 5941)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:07:31 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (6.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 29.3ms | Allocations: 4685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 8952)
+Completed 200 OK in 53ms (Views: 29.6ms | ActiveRecord: 15.8ms | Allocations: 10473)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:08:19 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 5546)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 2.5ms | Allocations: 5941)
+
+
+Started GET "/contacts/7/edit" for ::1 at 2021-11-09 16:08:20 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mContact Load (2.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 2.3ms | Allocations: 453)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 4804)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 2.2ms | Allocations: 5887)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:08:22 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1285)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 5549)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 2.0ms | Allocations: 5944)
+
+
+Started GET "/contacts/7" for ::1 at 2021-11-09 16:08:23 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mContact Load (1.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4694)
+Completed 200 OK in 23ms (Views: 15.8ms | ActiveRecord: 1.6ms | Allocations: 5906)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:08:24 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 5544)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 2.4ms | Allocations: 5939)
+
+
+Started DELETE "/contacts/7" for ::1 at 2021-11-09 16:08:29 +0100
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mContact Load (1.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mContact Destroy (1.6ms)[0m  [1m[31mDELETE FROM "contacts" WHERE "contacts"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+  [1m[36mHistory Create (2.2ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Eric"], ["last_name", "Valls"], ["email", "ericvalls@gmail.com"], ["phone", "628888645"], ["action", "Removal"], ["created_at", "2021-11-09 15:08:29.177419"], ["updated_at", "2021-11-09 15:08:29.177419"]]
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+Redirected to http://localhost:3000/contacts
+Completed 302 Found in 43ms (ActiveRecord: 12.0ms | Allocations: 5073)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:08:29 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5439)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.3ms | Allocations: 5840)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:08:31 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (2.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 5515)
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 2.3ms | Allocations: 6067)
+
+
+Started GET "/" for ::1 at 2021-11-09 16:08:32 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.8ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5420)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 1.9ms | Allocations: 5814)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:08:33 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 2.1ms | Allocations: 414)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4765)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 5162)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:08:35 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5420)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 2.3ms | Allocations: 5814)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:10:01 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 5177)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 1.9ms | Allocations: 5568)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:10:48 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.6ms | Allocations: 412)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.7ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4763)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 5160)
+
+
+Started POST "/contacts" for ::1 at 2021-11-09 16:11:04 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "button"=>"", "contact"=>{"first_name"=>"Mònica", "last_name"=>"Pérez Rodríguez", "email"=>"monicaperez97sb@gmail.com", "phone"=>"634985838"}}
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Load (2.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."email" = $1 LIMIT $2[0m  [["email", "monicaperez97sb@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Create (2.7ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Mònica"], ["last_name", "Pérez Rodríguez"], ["email", "monicaperez97sb@gmail.com"], ["phone", "634985838"], ["created_at", "2021-11-09 15:11:04.167541"], ["updated_at", "2021-11-09 15:11:04.167541"]]
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mHistory Create (1.4ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Mònica"], ["last_name", "Pérez Rodríguez"], ["email", "monicaperez97sb@gmail.com"], ["phone", "634985838"], ["action", "Creation"], ["created_at", "2021-11-09 15:11:04.175371"], ["updated_at", "2021-11-09 15:11:04.175371"]]
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/contacts/13
+Completed 302 Found in 33ms (ActiveRecord: 12.1ms | Allocations: 5616)
+
+
+Started GET "/contacts/13" for ::1 at 2021-11-09 16:11:04 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4386)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.0ms | Allocations: 5473)
+
+
+Started GET "/contacts/13/edit" for ::1 at 2021-11-09 16:11:05 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mContact Load (1.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 2.0ms | Allocations: 455)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4806)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 1.7ms | Allocations: 5889)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:11:07 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 276)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5312)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 2.3ms | Allocations: 5706)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:11:09 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (2.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 5.1ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5035)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 2.4ms | Allocations: 5588)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:11:12 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5299)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 2.8ms | Allocations: 5693)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:11:14 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 2.0ms | Allocations: 412)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.9ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 4777)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 5176)
+
+
+Started POST "/contacts" for ::1 at 2021-11-09 16:11:26 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "button"=>"", "contact"=>{"first_name"=>"Sergio", "last_name"=>"Pérez Osete", "email"=>"sergio@gmail.com", "phone"=>"655748933"}}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Load (1.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."email" = $1 LIMIT $2[0m  [["email", "sergio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Create (2.9ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Sergio"], ["last_name", "Pérez Osete"], ["email", "sergio@gmail.com"], ["phone", "655748933"], ["created_at", "2021-11-09 15:11:26.886291"], ["updated_at", "2021-11-09 15:11:26.886291"]]
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mHistory Create (1.4ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Sergio"], ["last_name", "Pérez Osete"], ["email", "sergio@gmail.com"], ["phone", "655748933"], ["action", "Creation"], ["created_at", "2021-11-09 15:11:26.895834"], ["updated_at", "2021-11-09 15:11:26.895834"]]
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/contacts/14
+Completed 302 Found in 34ms (ActiveRecord: 12.7ms | Allocations: 5358)
+
+
+Started GET "/contacts/14" for ::1 at 2021-11-09 16:11:26 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4399)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 1.0ms | Allocations: 5488)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:11:28 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 5420)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 1.8ms | Allocations: 5814)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:11:29 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.4ms | Allocations: 412)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.9ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4763)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 5160)
+
+
+Started POST "/contacts" for ::1 at 2021-11-09 16:11:49 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "button"=>"", "contact"=>{"first_name"=>"María José", "last_name"=>"Rodríguez Íñiguez", "email"=>"mariajose@gmail.com", "phone"=>"675899899"}}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Load (1.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."email" = $1 LIMIT $2[0m  [["email", "mariajose@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Create (2.7ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "María José"], ["last_name", "Rodríguez Íñiguez"], ["email", "mariajose@gmail.com"], ["phone", "675899899"], ["created_at", "2021-11-09 15:11:49.035775"], ["updated_at", "2021-11-09 15:11:49.035775"]]
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mHistory Create (1.3ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "María José"], ["last_name", "Rodríguez Íñiguez"], ["email", "mariajose@gmail.com"], ["phone", "675899899"], ["action", "Creation"], ["created_at", "2021-11-09 15:11:49.044928"], ["updated_at", "2021-11-09 15:11:49.044928"]]
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/contacts/15
+Completed 302 Found in 33ms (ActiveRecord: 12.0ms | Allocations: 5350)
+
+
+Started GET "/contacts/15" for ::1 at 2021-11-09 16:11:49 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4385)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.0ms | Allocations: 5472)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:11:50 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 5541)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 1.8ms | Allocations: 5935)
+
+
+Started GET "/contacts/new" for ::1 at 2021-11-09 16:12:12 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.7ms | Allocations: 412)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.1ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4763)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 5160)
+
+
+Started POST "/contacts" for ::1 at 2021-11-09 16:12:32 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "button"=>"", "contact"=>{"first_name"=>"Pedro", "last_name"=>"Galán", "email"=>"pedrogalan@gmail.com", "phone"=>"66644455"}}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Load (1.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."email" = $1 LIMIT $2[0m  [["email", "pedrogalan@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Create (2.3ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Pedro"], ["last_name", "Galán"], ["email", "pedrogalan@gmail.com"], ["phone", "66644455"], ["created_at", "2021-11-09 15:12:32.202561"], ["updated_at", "2021-11-09 15:12:32.202561"]]
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mHistory Create (1.3ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pedro"], ["last_name", "Galán"], ["email", "pedrogalan@gmail.com"], ["phone", "66644455"], ["action", "Creation"], ["created_at", "2021-11-09 15:12:32.211573"], ["updated_at", "2021-11-09 15:12:32.211573"]]
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/contacts/16
+Completed 302 Found in 33ms (ActiveRecord: 11.6ms | Allocations: 5350)
+
+
+Started GET "/contacts/16" for ::1 at 2021-11-09 16:12:32 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4385)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.0ms | Allocations: 5472)
+
+
+Started GET "/contacts/16/edit" for ::1 at 2021-11-09 16:12:34 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mContact Load (1.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.8ms | Allocations: 453)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.0ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4807)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 1.6ms | Allocations: 5890)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:12:35 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 5673)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 1.9ms | Allocations: 6067)
+
+
+Started GET "/contacts/13" for ::1 at 2021-11-09 16:12:38 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mContact Load (1.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.0ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4382)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 1.4ms | Allocations: 5466)
+
+
+Started GET "/" for ::1 at 2021-11-09 16:12:40 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5684)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 2.0ms | Allocations: 6080)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:12:43 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (1.9ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 5.2ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 1.0ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 5162)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 1.9ms | Allocations: 5715)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:12:46 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 5677)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 2.2ms | Allocations: 6072)
+
+
+Started GET "/contacts/15/edit" for ::1 at 2021-11-09 16:12:47 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mContact Load (1.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.9ms | Allocations: 454)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4805)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 1.6ms | Allocations: 5889)
+
+
+Started PATCH "/contacts/15" for ::1 at 2021-11-09 16:12:51 +0100
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "button"=>"", "contact"=>{"first_name"=>"María José", "last_name"=>"Rodríguez Íñiguez", "email"=>"mariajoseri@gmail.com", "phone"=>"675899899"}, "id"=>"15"}
+  [1m[36mContact Load (1.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Load (2.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."email" = $1 LIMIT $2[0m  [["email", "mariajoseri@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/contact.rb:9:in `uniqueness_of_email'
+  [1m[36mContact Update (1.9ms)[0m  [1m[33mUPDATE "contacts" SET "email" = $1, "updated_at" = $2 WHERE "contacts"."id" = $3[0m  [["email", "mariajoseri@gmail.com"], ["updated_at", "2021-11-09 15:12:51.940111"], ["id", 15]]
+  ↳ app/controllers/contacts_controller.rb:44:in `block in update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:44:in `block in update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:45:in `block in update'
+  [1m[36mHistory Create (1.4ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "María José"], ["last_name", "Rodríguez Íñiguez"], ["email", "mariajose@gmail.com"], ["phone", "675899899"], ["action", "Update"], ["created_at", "2021-11-09 15:12:51.946287"], ["updated_at", "2021-11-09 15:12:51.946287"]]
+  ↳ app/controllers/contacts_controller.rb:45:in `block in update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:45:in `block in update'
+Redirected to http://localhost:3000/contacts/15
+Completed 302 Found in 28ms (ActiveRecord: 12.5ms | Allocations: 5974)
+
+
+Started GET "/contacts/15" for ::1 at 2021-11-09 16:12:51 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4385)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.0ms | Allocations: 5473)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:12:52 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 5663)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 2.0ms | Allocations: 6057)
+
+
+Started DELETE "/contacts/16" for ::1 at 2021-11-09 16:12:55 +0100
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"16"}
+  [1m[36mContact Load (1.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:75:in `set_contact'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mContact Destroy (2.5ms)[0m  [1m[31mDELETE FROM "contacts" WHERE "contacts"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:60:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+  [1m[36mHistory Create (2.1ms)[0m  [1m[32mINSERT INTO "histories" ("first_name", "last_name", "email", "phone", "action", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pedro"], ["last_name", "Galán"], ["email", "pedrogalan@gmail.com"], ["phone", "66644455"], ["action", "Removal"], ["created_at", "2021-11-09 15:12:55.816134"], ["updated_at", "2021-11-09 15:12:55.816134"]]
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:62:in `block in destroy'
+Redirected to http://localhost:3000/contacts
+Completed 302 Found in 27ms (ActiveRecord: 12.0ms | Allocations: 4862)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:12:55 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (1.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5546)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.2ms | Allocations: 5945)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:12:57 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (2.1ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 5.4ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 5235)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 2.1ms | Allocations: 5786)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:12:59 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (3.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5541)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 3.2ms | Allocations: 5935)
+
+
+Started GET "/" for ::1 at 2021-11-09 16:13:12 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5544)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 2.1ms | Allocations: 5938)
+
+
+Started GET "/history" for ::1 at 2021-11-09 16:13:16 +0100
+Processing by ContactsController#history as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/history.html.erb within layouts/application
+  [1m[36mHistory Load (3.1ms)[0m  [1m[34mSELECT "histories".* FROM "histories" ORDER BY "histories"."created_at" DESC[0m
+  ↳ app/views/contacts/history.html.erb:23
+  Rendered contacts/history.html.erb within layouts/application (Duration: 6.4ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5245)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 3.1ms | Allocations: 5796)
+
+
+Started GET "/contacts" for ::1 at 2021-11-09 16:13:22 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (2.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:31
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered common/_header.html.erb (Duration: 0.6ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5546)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 2.6ms | Allocations: 5942)
+
+
